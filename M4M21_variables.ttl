@@ -1,0 +1,163 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix puv: <https://w3id.org/env/puv#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vocab: <http://purl.org/m4m21/variables/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix schema: <http://schema.org/>.
+@prefix iop:   <https://w3id.org/iadopt/ont/> .
+@prefix puv: <https://w3id.org/env/puv#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+
+iop:constrains  a     owl:ObjectProperty ;
+        rdfs:comment  "A Constraint constrains an Entity having a role in the Variable description." ;
+        rdfs:domain   iop:Constraint ;
+        rdfs:label    "constrains" ;
+        rdfs:range    iop:Entity .
+
+iop:hasConstraint  a  owl:ObjectProperty ;
+        rdfs:comment  "A Variable has a Constraint, that confines an Entity involved in the observation." ;
+        rdfs:domain   iop:Variable ;
+        rdfs:label    "hasConstraint" ;
+        rdfs:range    iop:Constraint .
+
+iop:hasContextObject  a  owl:ObjectProperty ;
+        rdfs:comment  "A Variable has an Entity that provides additional background information regarding the ObjectOfInterest." ;
+        rdfs:domain   iop:Variable ;
+        rdfs:label    "hasContextObject" ;
+        rdfs:range    iop:Entity .
+
+iop:hasMatrix  a            owl:ObjectProperty ;
+        rdfs:comment        "A Variable might have an Entity in which the ObjectOfInterest is contained." ;
+        rdfs:domain         iop:Variable ;
+        rdfs:label          "hasMatrix" ;
+        rdfs:range          iop:Entity ;
+        rdfs:subPropertyOf  iop:hasContextObject .
+
+iop:hasObjectOfInterest
+        a             owl:ObjectProperty ;
+        rdfs:comment  "A Variable has an Entity whose Property is observed." ;
+        rdfs:domain   iop:Variable ;
+        rdfs:label    "hasObjectOfInterest" ;
+        rdfs:range    iop:Entity .
+
+iop:hasProperty  a    owl:ObjectProperty ;
+        rdfs:comment  "A Variable has a Property that characterizes an Entity." ;
+        rdfs:domain   iop:Variable ;
+        rdfs:label    "hasProperty" ;
+        rdfs:range    iop:Property .
+
+puv:uom
+  a owl:ObjectProperty ;
+  rdfs:comment "scale or unit of measurement" ;
+  rdfs:label "unit-of-measurement " ;
+  rdfs:range puv:UnitOfMeasurement .
+
+puv:statistic
+  a owl:ObjectProperty ;
+  rdfs:comment "statistical treatment" ;
+  rdfs:domain puv:Parameter ;
+  rdfs:label "statistic " ;
+  rdfs:range puv:ParameterStatistic .
+
+puv:method
+  a owl:ObjectProperty ;
+  rdfs:comment "method used to measure the value" ;
+  rdfs:label "method" ;
+  rdfs:range puv:Method .
+        
+sosa:madeBySensor 
+  a owl:ObjectProperty ;
+  rdfs:label "made by sensor"@en ;
+  skos:definition "Relation between an Observation and the Sensor which made the Observation."@en ;
+  rdfs:comment "Relation between an Observation and the Sensor which made the Observation."@en ;
+  schema:domainIncludes sosa:Observation ;
+  schema:rangeIncludes sosa:Sensor ;
+  owl:inverseOf sosa:madeObservation ;
+  rdfs:isDefinedBy sosa: .
+
+<http://purl.org/m4m21/variables> a skos:ConceptScheme;
+  dct:created "2022-06-01T00:00:00+00:00"^^xsd:datetime;
+  dct:description "Vocabulary description"@en;
+  dct:hasVersion "0.1.0";
+  dct:modified "2023-02-14T14:14:06+00:00"^^xsd:datetime;
+  dct:rights <https://spdx.org/licenses/CC0-1.0>;
+  dct:title "Vocabulary title"@en;
+  skos:hasTopConcept vocab:1000, vocab:1005, vocab:1006, vocab:1007;
+  foaf:homepage "URL to the community developing vocab"@en .
+
+vocab:1000 a skos:Concept;
+  dct:created "2022-06-23"^^xsd:date;
+  dct:creator "0000-0003-2195-3997"@en;
+  dct:modified "2022-06-23"^^xsd:date;
+  skos:inScheme <http://purl.org/m4m21/variables>;
+  skos:narrower vocab:1001, vocab:1002, vocab:1003, vocab:1004;
+  skos:prefLabel "performance of feature"@en;
+  skos:topConceptOf <http://purl.org/m4m21/variables> .
+
+vocab:1001 a skos:Concept;
+  dct:created "2022-06-23"^^xsd:date;
+  dct:creator "0000-0003-2195-3997"@en;
+  dct:modified "2022-06-23"^^xsd:date;
+  skos:broader vocab:1000;
+  skos:inScheme <http://purl.org/m4m21/variables>;
+  skos:prefLabel "pre-surprise performance of key feature"@en .
+
+vocab:1002 a skos:Concept;
+  dct:created "2022-06-23"^^xsd:date;
+  dct:creator "0000-0003-2195-3997"@en;
+  dct:modified "2022-06-23"^^xsd:date;
+  skos:broader vocab:1000;
+  skos:inScheme <http://purl.org/m4m21/variables>;
+  skos:prefLabel "surprise performance of surprise feature"@en .
+
+vocab:1003 a skos:Concept;
+  dct:created "2022-06-23"^^xsd:date;
+  dct:creator "0000-0003-2195-3997"@en;
+  dct:modified "2022-06-23"^^xsd:date;
+  skos:broader vocab:1000;
+  skos:inScheme <http://purl.org/m4m21/variables>;
+  skos:prefLabel "post-surprise performance of key feature"@en .
+
+vocab:1004 a skos:Concept;
+  dct:created "2022-06-23"^^xsd:date;
+  dct:creator "0000-0003-2195-3997"@en;
+  dct:modified "2022-06-23"^^xsd:date;
+  skos:broader vocab:1000;
+  skos:inScheme <http://purl.org/m4m21/variables>;
+  skos:prefLabel "post-surprise performance of surprise feature"@en .
+
+vocab:1005 a skos:Concept;
+  dct:created "2022-06-23"^^xsd:date;
+  dct:creator "0000-0001-6361-2571"@en;
+  dct:modified "2022-06-23"^^xsd:date;
+  dct:source <https://www.sciencedirect.com/topics/engineering/power-spectrum>;
+  skos:definition "Spectral power of the signal measured from the data."@en;
+  skos:inScheme <http://purl.org/m4m21/variables>;
+  skos:prefLabel "spectral power"@en;
+  skos:topConceptOf <http://purl.org/m4m21/variables>;
+  puv:statistic <http://purl.bioontology.org/ontology/SNOMEDCT/255586005>;
+  puv:usesMethod <http://bioontology.org/ontologies/BiomedicalResourceOntology.owl#Fourier_Transform> .
+
+vocab:1006 a skos:Concept;
+  dct:created "2022-06-23"^^xsd:date;
+  dct:creator "0000-0001-6361-2571"@en;
+  dct:modified "2022-06-23"^^xsd:date;
+  dct:source <https://pubmed.ncbi.nlm.nih.gov/24360131/>;
+  skos:definition "Inter-trial coherence between various trials (epochs) across a measurement."@en;
+  skos:inScheme <http://purl.org/m4m21/variables>;
+  skos:prefLabel "inter-trial coherence"@en;
+  skos:topConceptOf <http://purl.org/m4m21/variables>;
+  puv:statistic <http://purl.bioontology.org/ontology/SNOMEDCT/255586005> .
+
+vocab:1007 a skos:Concept;
+  skos:inScheme <http://purl.org/m4m21/variables>;
+  skos:prefLabel "basophil level of blood"@en;
+  skos:topConceptOf <http://purl.org/m4m21/variables>;
+  puv:uom "percentage"@en;
+  iop:hasObjectOfInterest "blood"@en;
+  iop:hasProperty "basophil level"@en .
