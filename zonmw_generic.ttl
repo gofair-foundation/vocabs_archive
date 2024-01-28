@@ -1,0 +1,1014 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix gen: <http://purl.org/zonmw/generic/> .
+@prefix iop: <https://w3id.org/iadopt/ont/iadopt/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosthes: <http://purl.org/iso25964/skos-thes#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.org/zonmw/generic> a skos:ConceptScheme;
+  dct:contributor <https://orcid.org/0000-0002-9381-9693>;
+  dct:creator <https://orcid.org/0000-0002-7160-5942>, <https://orcid.org/0000-0003-2195-3997>;
+  dct:description "Controlled vocabulary of generic terms used in ZonMV project content metadata templates"@en;
+  dct:rights <https://spdx.org/licenses/CC0-1.0>;
+  dct:title "ZonMW Generic Vocabulary"@en;
+  pav:createdOn "2021-07-09T11:00:00+00:00"@en;
+  pav:lastUpdatedOn "2021-08-13T22:00:00+00:00"@en;
+  pav:version "1.1.0"@en;
+  skos:hasTopConcept gen:10000, gen:10001, gen:10002, gen:10003, gen:10004, gen:10005,
+    gen:10007, gen:10013, gen:10014, gen:10021, gen:10022, gen:10023, gen:10026, gen:10027,
+    gen:10075, gen:10099, gen:10105;
+  skos:prefLabel "ZonMW Generic Vocabulary"@en .
+
+gen:10000 a skos:Concept;
+  skos:definition "This is a set of controlled terms which are deprecated."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "deprecated"@en;
+  skos:topConceptOf <http://purl.org/zonmw/generic> .
+
+gen:10001 a skos:Concept;
+  skos:definition "ZonMw specific focus areas"@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "focus area"@en;
+  skos:topConceptOf <http://purl.org/zonmw/generic> .
+
+gen:10002 a skos:Concept;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "subject"@en;
+  skos:topConceptOf <http://purl.org/zonmw/generic> .
+
+gen:10003 a skos:Concept;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "temporal scope"@en;
+  skos:topConceptOf <http://purl.org/zonmw/generic> .
+
+gen:10004 a skos:Concept;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "population group"@en;
+  skos:topConceptOf <http://purl.org/zonmw/generic> .
+
+gen:10005 a skos:Concept;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "data"@en;
+  skos:topConceptOf <http://purl.org/zonmw/generic> .
+
+gen:10006 a skos:Concept;
+  skos:broader gen:10099;
+  skos:definition "Other forms of resources that are not easily categorized or defined"@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "other"@en .
+
+gen:10007 a skos:Concept;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:narrower gen:10008, gen:10009, gen:10010, gen:10011;
+  skos:prefLabel "biomaterial"@en;
+  skos:topConceptOf <http://purl.org/zonmw/generic> .
+
+gen:10008 a skos:Concept;
+  dct:source <http://purl.obolibrary.org/obo/OBI_0100026>;
+  skos:broader gen:10007;
+  skos:definition "A material entity that is an individual living system, such as animal, plant, bacteria or virus, that is capable of replicating or reproducing, growth and maintenance in the right environment. An organism may be unicellular or made up, like humans, of many billions of cells divided into specialized tissues and organs."@en;
+  skos:exactMatch <http://purl.obolibrary.org/obo/OBI_0100026>;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:narrower gen:10024, gen:10025, gen:10098;
+  skos:prefLabel "organism"@en .
+
+gen:10009 a skos:Concept;
+  dct:source <https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C19157>;
+  skos:broader gen:10007;
+  skos:definition "A part of a thing, or of several things, taken to demonstrate or to determine the character of the whole, e.g. a substance, or portion of material obtained for use in testing, examination, or study; particularly, a preparation of tissue or bodily fluid taken for examination or diagnosis."@en;
+  skos:exactMatch <http://purl.bioontology.org/ontology/SNOMEDCT/123038009>, <https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C19157>;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "specimen"@en .
+
+gen:10010 a skos:Concept;
+  dct:source <https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=21.02d&ns=ncit&code=C45306&key=n1938058024&b=1&n=null>;
+  skos:broader gen:10007;
+  skos:definition "Any matter of defined composition that has discrete existence, whose origin may be biological, mineral or chemical."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "substance"@en .
+
+gen:10011 a skos:Concept;
+  skos:broader gen:10007;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "macromolecule"@en .
+
+gen:10013 a skos:Concept;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "service"@en;
+  skos:topConceptOf <http://purl.org/zonmw/generic> .
+
+gen:10014 a skos:Concept;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:narrower gen:10015, gen:10016, gen:10017, gen:10018, gen:10019, gen:10020;
+  skos:prefLabel "standard"@en;
+  skos:topConceptOf <http://purl.org/zonmw/generic> .
+
+gen:10015 a skos:Concept;
+  skos:broader gen:10014;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "metadata standard"@en .
+
+gen:10016 a skos:Concept;
+  skos:broader gen:10014;
+  skos:definition "is the overarching name for any set of fixed denotations that are used to describe something with the goal to reduce ambiguity and facilitate machine interoperability. It can range from a simple controlled vocabulary (a simple list of terms) to a complex ontology (formal definitions of terms and their relations semantically expressed in a machine-readable way). This term may also include taxonomies, thesauri, conceptual models or any other kinds of knowledge organization sources."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "semantic artefact"@en .
+
+gen:10017 a skos:Concept;
+  skos:broader gen:10014;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "technical standard"@en .
+
+gen:10018 a skos:Concept;
+  skos:broader gen:10014;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "conceptual model"@en .
+
+gen:10019 a skos:Concept;
+  skos:broader gen:10014;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "guideline"@en .
+
+gen:10020 a skos:Concept;
+  skos:broader gen:10014;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "framework"@en .
+
+gen:10021 a skos:Concept;
+  dct:source iop:variable;
+  skos:definition "A description of something observed or derived, minimally consisting of an ObjectOfInterest and its Property."@en;
+  skos:exactMatch iop:variable;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "variable"@en;
+  skos:topConceptOf <http://purl.org/zonmw/generic> .
+
+gen:10022 a skos:Concept;
+  dct:source iop:property;
+  skos:definition "A type of a characteristic of the ObjectOfInterest."@en;
+  skos:exactMatch iop:property;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "property"@en;
+  skos:topConceptOf <http://purl.org/zonmw/generic> .
+
+gen:10023 a skos:Concept;
+  dct:source iop:constraint;
+  skos:definition "A Constraint limits the scope of the observation and confines the context to a particular state. It describes properties of the involved entities that are relevant to the particular observation."@en;
+  skos:exactMatch iop:constraint;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "constraint"@en;
+  skos:topConceptOf <http://purl.org/zonmw/generic> .
+
+gen:10024 a skos:Concept;
+  skos:broader gen:10008;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:narrower gen:10090, gen:10091, gen:10092, gen:10093, gen:10104;
+  skos:prefLabel "microorganism"@en .
+
+gen:10025 a skos:Concept;
+  skos:broader gen:10008;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "animal"@en .
+
+gen:10026 a skos:Concept;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:narrower gen:10095, gen:10096, gen:10097;
+  skos:prefLabel "disease"@en;
+  skos:topConceptOf <http://purl.org/zonmw/generic> .
+
+gen:10027 a skos:Concept;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:narrower gen:10028, gen:10029, gen:10030, gen:10031, gen:10032, gen:10033, gen:10034,
+    gen:10035, gen:10036, gen:10037, gen:10038, gen:10039, gen:10040, gen:10041, gen:10042,
+    gen:10043, gen:10044, gen:10045, gen:10046, gen:10047, gen:10048, gen:10049, gen:10050,
+    gen:10051, gen:10052, gen:10053, gen:10054, gen:10055, gen:10056, gen:10057, gen:10058,
+    gen:10059, gen:10060, gen:10061, gen:10062, gen:10063, gen:10064, gen:10065, gen:10066,
+    gen:10067, gen:10068, gen:10069, gen:10070, gen:10071, gen:10072, gen:10073, gen:10074,
+    gen:10102;
+  skos:prefLabel "institution"@en;
+  skos:topConceptOf <http://purl.org/zonmw/generic> .
+
+gen:10028 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "Academic Medical Center - Amsterdam UMC"@en .
+
+gen:10029 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "Amsterdam Health and Technology Institute - AHTI"@en .
+
+gen:10030 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "Delft University of Technology"@en .
+
+gen:10031 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "Eindhoven University of Technology"@en .
+
+gen:10032 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "Erasmus Centrum voor Zorgbestuur"@en .
+
+gen:10033 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "Erasmus MC"@en .
+
+gen:10034 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "Erasmus University Rotterdam"@en .
+
+gen:10035 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "Expertisecentrum Nederlands"@en .
+
+gen:10036 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "Federal University of Rio de Janeiro"@en .
+
+gen:10037 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "GGD Amsterdam - Public Health Service of Amsterdam"@en .
+
+gen:10038 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "GGD Zuid Holland Zuid"@en .
+
+gen:10039 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "GO FAIR Foundation"@en .
+
+gen:10040 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "Hogeschool Leiden - University of Applied Sciences Leiden"@en .
+
+gen:10041 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "Hogeschool van Amsterdam - Amsterdam University of Applied Sciences"@en .
+
+gen:10042 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "IKNL - Netherlands Comprehensive Cancer Organisation"@en .
+
+gen:10043 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "Leiden University"@en .
+
+gen:10044 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "Leiden University Medical Center"@en .
+
+gen:10045 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "Maastricht University"@en .
+
+gen:10046 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "Maastricht University Medical Centre"@en .
+
+gen:10047 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "Netherlands Comprehensive Cancer Organisation"@en .
+
+gen:10048 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "Netherlands Heart Institute"@en .
+
+gen:10049 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "NIVEL - Netherlands Institute for Health Services Research"@en .
+
+gen:10050 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "NSCR - Netherlands Institute for the Study of Crime and Law Enforcement"@en .
+
+gen:10051 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "Public Health Service of Amsterdam"@en .
+
+gen:10052 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "Public Procurement Research Centre - PPRC"@en .
+
+gen:10053 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "Radboud University Nijmegen"@en .
+
+gen:10054 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "Radboud University Nijmegen Medical Centre"@en .
+
+gen:10055 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "Reade Research BV"@en .
+
+gen:10056 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "RIVM - National Institute for Public Health and the Environment"@en .
+
+gen:10057 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "Sanquin"@en .
+
+gen:10058 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "Saxion University of Applied Sciences"@en .
+
+gen:10059 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "SEO Economisch Onderzoek"@en .
+
+gen:10060 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "Spaarne Gasthuis - Spaarne Ziekenhuis"@en .
+
+gen:10061 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "Tilburg University"@en .
+
+gen:10062 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "TNO - Netherlands Organisation for Applied Scientific Research"@en .
+
+gen:10063 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "University Medical Center Groningen"@en .
+
+gen:10064 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "University Medical Center Utrecht"@en .
+
+gen:10065 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "University of Amsterdam"@en .
+
+gen:10066 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "University of Groningen"@en .
+
+gen:10067 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "University of Humanistic Studies"@en .
+
+gen:10068 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "University of Twente"@en .
+
+gen:10069 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "Utrecht University"@en .
+
+gen:10070 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "Veiligheids- en Gezondheidsregio Gelderland-Midden"@en .
+
+gen:10071 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "VU Amsterdam"@en .
+
+gen:10072 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "VU University Medical Center"@en .
+
+gen:10073 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "Wageningen University & Research"@en .
+
+gen:10074 a skos:Concept;
+  skos:broader gen:10027, gen:10102;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "ZonMw - Netherlands Organisation for Health Research and Development"@en .
+
+gen:10075 a skos:Concept;
+  dct:source <https://schema.datacite.org/meta/kernel-4.4/doc/DataCite-MetadataKernel_v4.4.pdf>;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:narrower gen:10076, gen:10077, gen:10078, gen:10079, gen:10080, gen:10081, gen:10082,
+    gen:10083, gen:10084, gen:10085, gen:10086, gen:10087, gen:10088, gen:10089;
+  skos:prefLabel "contributor type"@en;
+  skos:topConceptOf <http://purl.org/zonmw/generic> .
+
+gen:10076 a skos:Concept;
+  dct:source <https://schema.datacite.org/meta/kernel-4.4/doc/DataCite-MetadataKernel_v4.4.pdf>;
+  skos:broader gen:10075;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "data collector"@en .
+
+gen:10077 a skos:Concept;
+  dct:source <https://schema.datacite.org/meta/kernel-4.4/doc/DataCite-MetadataKernel_v4.4.pdf>;
+  skos:broader gen:10075;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "data manager"@en .
+
+gen:10078 a skos:Concept;
+  dct:source <https://schema.datacite.org/meta/kernel-4.4/doc/DataCite-MetadataKernel_v4.4.pdf>;
+  skos:broader gen:10075;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "data curator"@en .
+
+gen:10079 a skos:Concept;
+  dct:source <https://schema.datacite.org/meta/kernel-4.4/doc/DataCite-MetadataKernel_v4.4.pdf>;
+  skos:broader gen:10075;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "sponsor"@en .
+
+gen:10080 a skos:Concept;
+  dct:source <https://schema.datacite.org/meta/kernel-4.4/doc/DataCite-MetadataKernel_v4.4.pdf>;
+  skos:broader gen:10075;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "distributor"@en .
+
+gen:10081 a skos:Concept;
+  dct:source <https://schema.datacite.org/meta/kernel-4.4/doc/DataCite-MetadataKernel_v4.4.pdf>;
+  skos:broader gen:10075;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "project leader"@en .
+
+gen:10082 a skos:Concept;
+  dct:source <https://schema.datacite.org/meta/kernel-4.4/doc/DataCite-MetadataKernel_v4.4.pdf>;
+  skos:broader gen:10075;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "project manager"@en .
+
+gen:10083 a skos:Concept;
+  dct:source <https://schema.datacite.org/meta/kernel-4.4/doc/DataCite-MetadataKernel_v4.4.pdf>;
+  skos:broader gen:10075;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "project member"@en .
+
+gen:10084 a skos:Concept;
+  dct:source <https://schema.datacite.org/meta/kernel-4.4/doc/DataCite-MetadataKernel_v4.4.pdf>;
+  skos:broader gen:10075;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "reseacher"@en .
+
+gen:10085 a skos:Concept;
+  dct:source <https://schema.datacite.org/meta/kernel-4.4/doc/DataCite-MetadataKernel_v4.4.pdf>;
+  skos:broader gen:10075;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "editor"@en .
+
+gen:10086 a skos:Concept;
+  dct:source <https://schema.datacite.org/meta/kernel-4.4/doc/DataCite-MetadataKernel_v4.4.pdf>;
+  skos:broader gen:10075;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "rights holder"@en .
+
+gen:10087 a skos:Concept;
+  dct:source <https://schema.datacite.org/meta/kernel-4.4/doc/DataCite-MetadataKernel_v4.4.pdf>;
+  skos:broader gen:10075;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "supervisor"@en .
+
+gen:10088 a skos:Concept;
+  dct:source <https://schema.datacite.org/meta/kernel-4.4/doc/DataCite-MetadataKernel_v4.4.pdf>;
+  skos:broader gen:10075;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "work package leader"@en .
+
+gen:10089 a skos:Concept;
+  dct:source <https://schema.datacite.org/meta/kernel-4.4/doc/DataCite-MetadataKernel_v4.4.pdf>;
+  skos:broader gen:10075;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "contact person"@en .
+
+gen:10090 a skos:Concept;
+  dct:source <https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C14187>;
+  skos:broader gen:10024;
+  skos:definition "Unicellular, prokaryotic organisms that reproduce by cell division and usually have cell walls; can be shaped like spheres, rods or spirals and can be found in virtually any environment."@en;
+  skos:exactMatch <https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C14187>;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "bacterium"@en .
+
+gen:10091 a skos:Concept;
+  dct:source <https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C28176>;
+  skos:broader gen:10024;
+  skos:exactMatch <http://purl.obolibrary.org/obo/NCIT_C28176>;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "prion"@en .
+
+gen:10092 a skos:Concept;
+  dct:source <https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C14283>;
+  skos:broader gen:10024;
+  skos:definition "An infectious agent which consists of two parts, genetic material and a protein coat. These organisms lack independent metabolism, and they must infect the cells of other types of organisms to reproduce. Most viruses are capable of passing through fine filters that retain bacteria, and are not visible through a light microscope."@en;
+  skos:exactMatch <https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C14283>;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "virus"@en .
+
+gen:10093 a skos:Concept;
+  skos:broader gen:10024;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "fungus"@en .
+
+gen:10094 a skos:Concept;
+  skos:broader gen:10099;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "none"@en .
+
+gen:10095 a skos:Concept;
+  skos:broader gen:10026;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "human disease"@en .
+
+gen:10096 a skos:Concept;
+  skos:broader gen:10026;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "animal disease"@en .
+
+gen:10097 a skos:Concept;
+  skos:broader gen:10026;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "plant disease"@en .
+
+gen:10098 a skos:Concept;
+  skos:broader gen:10008;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "plant"@en .
+
+gen:10099 a skos:Concept;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:narrower gen:10006, gen:10094, gen:10100, gen:10101, gen:10103;
+  skos:prefLabel "generic answer options"@en;
+  skos:topConceptOf <http://purl.org/zonmw/generic> .
+
+gen:10100 a skos:Concept;
+  skos:broader gen:10099;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "yes"@en .
+
+gen:10101 a skos:Concept;
+  skos:broader gen:10099;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "no"@en .
+
+gen:10102 a skos:Concept;
+  skos:broader gen:10027;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:narrower gen:10074;
+  skos:prefLabel "funder institution"@en .
+
+gen:10103 a skos:Concept;
+  skos:broader gen:10099;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "unknown"@en .
+
+gen:10104 a skos:Concept;
+  skos:broader gen:10024;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "protozoa"@en .
+
+gen:10105 a skos:Concept;
+  skos:altLabel "format"@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:narrower gen:10106, gen:10107, gen:10108, gen:10109, gen:10110, gen:10111, gen:10112,
+    gen:10113, gen:10114, gen:10115, gen:10116, gen:10117, gen:10118, gen:10119, gen:10120,
+    gen:10121, gen:10122, gen:10123, gen:10124, gen:10125, gen:10126, gen:10127, gen:10128,
+    gen:10129, gen:10130, gen:10131, gen:10132, gen:10133, gen:10134, gen:10135, gen:10136,
+    gen:10137, gen:10138, gen:10139, gen:10140, gen:10141, gen:10142, gen:10143, gen:10144,
+    gen:10145, gen:10146, gen:10147, gen:10148, gen:10149, gen:10150, gen:10151, gen:10152,
+    gen:10153, gen:10154, gen:10155, gen:10156, gen:10157, gen:10158, gen:10159, gen:10160,
+    gen:10161;
+  skos:prefLabel "media type"@en;
+  skos:topConceptOf <http://purl.org/zonmw/generic> .
+
+gen:10106 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/text-documents/pdf-a/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred text format with '.pdf' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "PDF/A - Portable Document Format for archiving"@en .
+
+gen:10107 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/text-documents/pdf-pdf/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS non-preferred text format, which includes all PDF other than PDF/A wiht '.pdf' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "PDF - Portable Document Format"@en .
+
+gen:10108 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/text-documents/opendocument-text/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred text format with '.odt' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "ODT - Open Document"@en .
+
+gen:10109 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/text-documents/microsoft-word-and-office-open-xml/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS non-preferred text format with '.doc' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "DOC - Microsoft Word"@en .
+
+gen:10110 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/text-documents/microsoft-word-and-office-open-xml/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS non-preferred text format with '.docx' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "DOCX - Office Open XML"@en .
+
+gen:10111 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/text-documents/rich-text-file-rtf/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS non-preferred text format with '.rtf' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "RTF - Rich Text File"@en .
+
+gen:10112 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/plain-text/unicode/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred plain text format with '.txt' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "TXT - Unicode text"@en .
+
+gen:10113 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/plain-text/unicode/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS non-preferred plain text format with '.txt' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "TXT - Non-Unicode text"@en .
+
+gen:10114 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/markup-language/xml/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred markup language format with '.xml' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "XML - eXtensivle Markup Language"@en .
+
+gen:10115 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/markup-language/html/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred markup language format with '.xml' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "HTML - Hypertext Markup Language"@en .
+
+gen:10116 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/markup-language/css/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred markup language format with '.css' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "CSS - Cascading Style Sheets"@en .
+
+gen:10117 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/markup-language/xslt/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred markup language format with '.xslt' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "XSLT - Extensible Stylesheet Language Transformations"@en .
+
+gen:10118 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/markup-language/script/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred markup language format with '.js' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "JS - JavaScript"@en .
+
+gen:10119 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/markup-language/script/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred markup language format with '.es' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "ES - ECMAScript"@en .
+
+gen:10120 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/markup-language/sgml/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS non-preferred markup language format with '.es' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "SGML - Standard Generalized Markup Language"@en .
+
+gen:10121 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/markup-language/markdown/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS non-preferred markup language format with '.md' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "MD - Markdown"@en .
+
+gen:10122 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/programming-languages/matlab/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred programming language format."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "MATLAB"@en .
+
+gen:10123 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/programming-languages/netcdf/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred file format. It is an interface to a library of data access functions for storing and retrieving data in the form of arrays."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "NetCDF - Network Common Data Form"@en .
+
+gen:10124 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/programming-languages/text-fabric/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred file format. Files with this format store a column of feature values that correspond to nodes and edges in a graph, which together represent annotated text."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "TF - Text-Fabric"@en .
+
+gen:10125 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/spreadsheets/ods/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred spreadsheet format with '.ods' ending. It is an ISO standardized format for office documents."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "ODS"@en .
+
+gen:10126 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/spreadsheets/csv/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred spreadsheet format with '.csv' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "CSV - Comma Separated Values"@en .
+
+gen:10127 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/spreadsheets/microsoft-excel/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS non-preferred spreadsheet format with '.xls' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "XLS - Microsoft Excel"@en .
+
+gen:10128 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/spreadsheets/office-open-xml-workbook/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS non-preferred spreadsheet format with '.xlsx' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "XLSX - Office Open XML Workbook"@en .
+
+gen:10129 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/databases/sql/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred database format with '.sql' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "SQL - Structured Query Language"@en .
+
+gen:10130 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/databases/siard/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred database format."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "SIARD - Software Independent Archiving of Relational Databases"@en .
+
+gen:10131 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/databases/microsoft-access/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS non-preferred database format with '.mdb' or 'accdb' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "Microsoft Access"@en .
+
+gen:10132 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/databases/dbase/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS non-preferred database format with '.dbf' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "DBF - dBase"@en .
+
+gen:10133 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS non-preferred database format with '.hdf5', '.he5' or '.h5' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "HDF5 - Hierarchical Data Format"@en .
+
+gen:10134 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/statistical-data/data-and-setup/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred statistical data format with '.dat/.sps' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "SPSS"@en .
+
+gen:10135 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/statistical-data/data-and-setup/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred statistical data format with '.dat/.Do' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "STATA"@en .
+
+gen:10136 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/statistical-data/r/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred statistical data format."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "R"@en .
+
+gen:10137 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/images-raster/jpeg/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred raster images format with '.jpg/.jpeg' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "JPEG - Joint Photographic Expert Group"@en .
+
+gen:10138 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/images-raster/jpeg-2000/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred raster images format with '.jp2' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "JPEG 2000"@en .
+
+gen:10139 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/images-raster/tiff/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred raster images format with '.tiff' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "TIFF - Tagged Image File Format"@en .
+
+gen:10140 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/images-raster/png/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred raster images format with '.png' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "PNG - Portable Network Graphics"@en .
+
+gen:10141 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/images-raster/dicom/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred raster images format with '.dcm' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "DICOM - Digital Imaging and Communications in Medicine"@en .
+
+gen:10142 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/images-vector/svg/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred raster images format with '.svg' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "SVG - Scalable Vector Graphics"@en .
+
+gen:10143 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/audio/bwf/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred audio format with '.bwf' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "BWF - Broadcast Wave Format"@en .
+
+gen:10144 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/audio/mxf/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred audio and video format with '.mxf' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "MXF - Material Exchange Format"@en .
+
+gen:10145 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/audio/matroska/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred audio and video format with '.mka' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "MKA - Matroska"@en .
+
+gen:10146 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/audio/flac/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred audio format with '.flac' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "FLAC - Free Lossless Audio Codec"@en .
+
+gen:10147 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/audio/opus/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred audio format."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "OPUS"@en .
+
+gen:10148 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/computer-aided-design-cad/autocad-dxf-versie-r12-ascii/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred computer aided design format with '.dxf' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "DXF - AutoCAD DXF version R12 (ASCII)"@en .
+
+gen:10149 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/geographical-information-systems-gis/gml/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred GIS format with '.gml' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "GML - Geography Markup Language"@en .
+
+gen:10150 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/geographical-information-systems-gis/mif-mid/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred GIS format with '.mif' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "MIF/MID - MapInfo Interchange Format"@en .
+
+gen:10151 a skos:Concept;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred GIS format with '.json' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "GeoJSON"@en .
+
+gen:10152 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/images-georeference/geotiff/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred georeferenced images format with '.tif' or '.tiff' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "GeoTIFF"@en .
+
+gen:10153 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/raster-gis/ascii-grid/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred raster GIS format with '.asc' or '.txt' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "ASCII GRID"@en .
+
+gen:10154 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/3d/wavefront-object/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred 3D geometry format with '.obj' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "WaveFront Object"@en .
+
+gen:10155 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/3d/polygon-file-format/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred 3D geometry format with '.ply' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "Polygon file format"@en .
+
+gen:10156 a skos:Concept;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred linked data format with '.rdf' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "RDF - Resource Description Framework"@en .
+
+gen:10157 a skos:Concept;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred linked data format with '.trig' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "TriG"@en .
+
+gen:10158 a skos:Concept;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred linked data format with '.ttl' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "Turtle"@en .
+
+gen:10159 a skos:Concept;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred linked data format with '.nt' ending."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "NTriples"@en .
+
+gen:10160 a skos:Concept;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred linked data format based on JSON."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "JSON-LD"@en .
+
+gen:10161 a skos:Concept;
+  dct:source <https://dans.knaw.nl/en/file-formats/computer-assisted-qualitative-data-analysis-caqdas/refi-qda-qualitative-data-analysis/>;
+  skos:broader gen:10105;
+  skos:definition "A DANS preferred qualitative data analysis standard for exchange of qualtitative data between QDA programs."@en;
+  skos:inScheme <http://purl.org/zonmw/generic>;
+  skos:prefLabel "REFI-QDA - Qualitative Data Analysis"@en .
