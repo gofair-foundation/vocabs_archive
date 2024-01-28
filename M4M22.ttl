@@ -1,0 +1,509 @@
+@prefix bao: <http://www.bioassayontology.org/bao#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix incentive: <http://purl.org/incentive/> .
+@prefix iop: <https://w3id.org/iadopt/ont/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix puv: <https://w3id.org/env/puv#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosthes: <http://purl.org/iso25964/skos-thes#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.org/incentive> a skos:ConceptScheme;
+  dct:creator <https://orcid.org/0000-0003-2195-3997>;
+  dct:description "Quantitative and qualitative variables describing ..."@en;
+  dct:hasVersion "0.1.1"@en;
+  dct:rights <https://spdx.org/licenses/CC0-1.0>;
+  dct:title "INCENTIVE Project Controlled Vocabulary"@en;
+  pav:createdOn "2021-08-23T16:13+00:00"@en;
+  pav:lastUpdatedOn "2023-11-23T18:01:10+00:00"@en;
+  skos:hasTopConcept incentive:1000, incentive:1001, incentive:1011, incentive:1048,
+    incentive:1053, incentive:1074;
+  foaf:homepage <https://zenodo.org/communities/incentive/about/> .
+
+incentive:1000 a skos:Concept;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:narrower obo:ERO_0000637, obo:OBI_0000916, obo:OBI_0000920, obo:OBI_0001271,
+    obo:OBI_0002145, obo:OBI_0003097, obo:OBI_0003229, incentive:1004;
+  skos:prefLabel "assay"@en;
+  skos:topConceptOf <http://purl.org/incentive> .
+
+incentive:1001 a skos:Concept;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:narrower incentive:1022, incentive:1023, incentive:1024, incentive:1025, incentive:1026,
+    incentive:1027, incentive:1028, incentive:1029, incentive:1030, incentive:1031, incentive:1032,
+    incentive:1033, incentive:1034, incentive:1035, incentive:1036, incentive:1037, incentive:1038,
+    incentive:1039, incentive:1040, incentive:1041, incentive:1042, incentive:1043, incentive:1044,
+    incentive:1045, incentive:1046, incentive:1047, incentive:1050, incentive:1051, incentive:1052,
+    incentive:1079;
+  skos:prefLabel "variable"@en;
+  skos:topConceptOf <http://purl.org/incentive> .
+
+obo:OBI_0002145 a skos:Concept;
+  skos:broader incentive:1000;
+  skos:definition "An analyte assay that measures the presence or amount of antibodies to a specified antigen."@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:narrower incentive:1003;
+  skos:prefLabel "antigen specific antibodies assay"@en .
+
+incentive:1003 a skos:Concept;
+  skos:broader obo:OBI_0002145;
+  skos:definition "multiplex assay that measures the amount and avidity of a specific IgG subclass to several influenza virus antigens"@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "quantitative suspension multiplex assay to measure IgG subclasses and avidity to influenza virus antigens"@en .
+
+obo:OBI_0003097 a skos:Concept;
+  skos:broader incentive:1000;
+  skos:definition "A mass spectrometry assay where a sample mixture is first separated by liquid chromatography before being converted into ions which are characterized by using mass spectrometry based on their mass-to-charge ratio and relative abundance."@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "liquid chromatography mass spectrometry assay"@en .
+
+obo:OBI_0003229 a skos:Concept;
+  skos:broader incentive:1000;
+  skos:definition "A proteomics profiling assay that detects proteins in a blood plasma specimen."@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "plasma proteomics assay"@en .
+
+obo:OBI_0001271 a skos:Concept;
+  skos:broader incentive:1000;
+  skos:definition "An RNA sequencing assay that determines an RNA sequence by analyzing the transcibed regions of the genome and or to quantitate transcript abundance."@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "RNA-seq assay"@en .
+
+obo:ERO_0000637 a skos:Concept;
+  skos:broader incentive:1000;
+  skos:definition "A molecular assay that permits the simultaneous measurement of an array of proteins in a single, small volume sample."@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "multiplex bead-based assay"@en .
+
+incentive:1004 a skos:Concept;
+  dct:source <https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=C130182>;
+  skos:broader incentive:1000;
+  skos:definition "A type of solid-phase multiplex assay that uses microbeads coated with recombinant or infinity purified antigens from a single allele for the detection and identification of an antibody that would bind and react to this antigen."@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "singleplex bead-based assay"@en .
+
+obo:OBI_0000916 a skos:Concept;
+  skos:broader incentive:1000;
+  skos:definition "A cytometry assay in which an input cell population is put in solution, is passed by a laser, and optical sensors are used to detect scattering of the laser light and/or fluorescence of specific markers to count and characterize the particles in solution."@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "flow cytometry assay"@en .
+
+obo:OBI_0000920 a skos:Concept;
+  skos:broader incentive:1000;
+  skos:definition "An analyte assay in which a series of beads coated with antibodies, antigens, or other small molecules are used to detect an analyte of interest."@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "cytometric bead array assay"@en .
+
+incentive:1011 a skos:Concept;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:narrower obo:CHEBI_59163, obo:NCIT_C131144, obo:NCIT_C54680, obo:OBA_0003194,
+    obo:OMP_0007632, incentive:1012, incentive:1013, incentive:1014, incentive:1018, incentive:1019;
+  skos:prefLabel "subject"@en;
+  skos:topConceptOf <http://purl.org/incentive> .
+
+incentive:1012 a skos:Concept;
+  skos:broader incentive:1011;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "antibody crossreactivity between vaccine antigens"@en .
+
+incentive:1013 a skos:Concept;
+  skos:broader incentive:1011;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "functionality of vaccine induced antibodies"@en .
+
+incentive:1014 a skos:Concept;
+  skos:broader incentive:1011;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "antibodies as biomarkers of vaccine protection"@en .
+
+obo:CHEBI_59163 a skos:Concept;
+  skos:broader incentive:1011;
+  skos:definition "A substance used as an indicator of a biological state."@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "biomarker"@en .
+
+obo:NCIT_C131144 a skos:Concept;
+  skos:broader incentive:1011;
+  skos:definition "A marked decrease in contrast enhancement that is not due to actual tumor shrinkage, but that may be due to immunotherapy."@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "immunoresponse"@en .
+
+obo:NCIT_C54680 a skos:Concept;
+  skos:broader incentive:1011;
+  skos:definition "The mechanism by which a pharmacologically active substance produces an effect on a living organism or in a biochemical system."@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "mechanism of action"@en .
+
+incentive:1018 a skos:Concept;
+  skos:broader incentive:1011;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "vaccine response evaluation"@en .
+
+incentive:1019 a skos:Concept;
+  skos:broader incentive:1011;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "biomarker links pre-vaccination response to vaccine response"@en .
+
+obo:OMP_0007632 a skos:Concept;
+  skos:broader incentive:1011;
+  skos:definition "A microbial phenotype that is observed at the level of an individual cell. This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we recommend that it not be used for direct annotation. Please consider using a more specific term to annotate each phenotype."@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "cell phenotype"@en .
+
+obo:OBA_0003194 a skos:Concept;
+  skos:broader incentive:1011;
+  skos:definition "The functionality of a cell."@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "cell functionality"@en .
+
+incentive:1022 a skos:Concept;
+  skos:broader incentive:1001;
+  skos:definition "levels of immunoglobulin 1 against recombinant hemaglutionin from the strain A/California/04/2009 wt rHA H1 7871"@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "levels IgG1-rHA_C"@en .
+
+incentive:1023 a skos:Concept;
+  skos:broader incentive:1001;
+  skos:definition "levels of immunoglobulin 1 against recombinant hemaglutionin from the strain A/California/04/2009 wt rHA H1 7871 with urea"@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "levels IgG1-rHA_C with urea"@en .
+
+incentive:1024 a skos:Concept;
+  skos:broader incentive:1001;
+  skos:definition "avidity of immunoglobulin 1 against recombinant hemaglutionin from the strain A/California/04/2009 wt rHA H1 7871"@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "avidity levels IgG1-rHA_C"@en .
+
+incentive:1025 a skos:Concept;
+  skos:broader incentive:1001;
+  skos:definition "levels of immunoglobulin 1 against recombinant hemaglutionin from the strain A/Brisbane/02/2018 wt rHA H1 20235"@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "levels IgG1-rHA_B"@en .
+
+incentive:1026 a skos:Concept;
+  skos:broader incentive:1001;
+  skos:definition "levels of immunoglobulin 1 against recombinant hemaglutionin from the strain A/Brisbane/02/2018 wt rHA H1 20235 with urea"@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "levels IgG1-rHA_B with urea"@en .
+
+incentive:1027 a skos:Concept;
+  skos:broader incentive:1001;
+  skos:definition "avidity of immunoglobulin 1 against recombinant hemaglutionin from the strain A/Brisbane/02/2018 wt rHA H1 20235"@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "avidity levels IgG1-rHA_B"@en .
+
+incentive:1028 a skos:Concept;
+  skos:broader incentive:1001;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "relative concentration of lipids in plasma"@en .
+
+incentive:1029 a skos:Concept;
+  skos:broader incentive:1001;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "absolute concentration of metablites in plasma"@en .
+
+incentive:1030 a skos:Concept;
+  skos:broader incentive:1001;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "relative concentration of proteins in plasma"@en .
+
+incentive:1031 a skos:Concept;
+  skos:broader incentive:1001;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "count of reads of RNAs"@en .
+
+incentive:1032 a skos:Concept;
+  skos:broader incentive:1001;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "corrected P-value of RNAs"@en .
+
+incentive:1033 a skos:Concept;
+  skos:broader incentive:1001;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "fold change of RNAs"@en .
+
+incentive:1034 a skos:Concept;
+  skos:broader incentive:1001;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "retention time of lipids in plasma"@en .
+
+incentive:1035 a skos:Concept;
+  skos:broader incentive:1001;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "mass to charge of lipids in plasma"@en .
+
+incentive:1036 a skos:Concept;
+  skos:broader incentive:1001;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "chemical shift of metabolites in plasma"@en .
+
+incentive:1037 a skos:Concept;
+  skos:broader incentive:1001;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "intensity of metabolites in plasma"@en .
+
+incentive:1038 a skos:Concept;
+  skos:broader incentive:1001;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "fluorescence of multiple cytokines with luminex"@en .
+
+incentive:1039 a skos:Concept;
+  skos:broader incentive:1001;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "fluorescence of multiple cytokines with simoa"@en .
+
+incentive:1040 a skos:Concept;
+  skos:broader incentive:1001;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "cytokine concentration"@en .
+
+incentive:1041 a skos:Concept;
+  skos:broader incentive:1001;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "average enzyme per beads"@en .
+
+incentive:1042 a skos:Concept;
+  skos:broader incentive:1001;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "fluorescence intensity of immune cell populations in human blood samples"@en .
+
+incentive:1043 a skos:Concept;
+  skos:broader incentive:1001;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "median fluorescence intensity of antibodies bound to markers on immune cells in human blood samples"@en .
+
+incentive:1044 a skos:Concept;
+  skos:broader incentive:1001;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "frequeny of immune cell populations (phenotype and functionality) in human blood samples"@en .
+
+incentive:1045 a skos:Concept;
+  skos:broader incentive:1001;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "counts of immune cell populations (phenotype and functionality) in human blood samples"@en .
+
+incentive:1046 a skos:Concept;
+  skos:broader incentive:1001;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "fluorescence intensity of antibody bound to soluble factors in human blood samples"@en .
+
+incentive:1047 a skos:Concept;
+  skos:broader incentive:1001;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "mean fluorescence intensity of antibody bound to soluble factors in human blood samples"@en .
+
+incentive:1048 a skos:Concept;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:narrower obo:MS_1000894, obo:NCIT_C163046, obo:NCIT_C16586, obo:NCIT_C25463,
+    obo:NCIT_C25554, sio:SIO_001088, sio:SIO_001367;
+  skos:prefLabel "property"@en;
+  skos:topConceptOf <http://purl.org/incentive> .
+
+obo:MS_1000894 a skos:Concept;
+  skos:broader incentive:1048;
+  skos:definition "A time interval from the start of chromatography when an analyte exits a chromatographic column."@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "retention time"@en .
+
+incentive:1050 a skos:Concept;
+  skos:broader incentive:1001;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "retention time of peptides in plasma"@en .
+
+incentive:1051 a skos:Concept;
+  skos:broader incentive:1001;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "mass to charge of peptides in plasma"@en .
+
+incentive:1052 a skos:Concept;
+  skos:broader incentive:1001;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "intensity of peptides in plasma"@en .
+
+incentive:1053 a skos:Concept;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:narrower obo:CHEBI_25212, obo:NCIT_C12434, obo:NCIT_C13356, obo:NCIT_C14225,
+    obo:NCIT_C16295, obo:NCIT_C16554, obo:NCIT_C20464, obo:NCIT_C616, obo:NCIT_C735, obo:OBI_0001875,
+    incentive:1062, incentive:1063, incentive:1064, incentive:1071, bao:BAO_0000175, bao:BAO_0000270;
+  skos:prefLabel "entity"@en;
+  skos:topConceptOf <http://purl.org/incentive> .
+
+bao:BAO_0000175 a skos:Concept;
+  skos:broader incentive:1053;
+  skos:definition "A protein or polypeptide is a long polymer of amino acids joined together by peptide bonds. The sequence of the amino acids is defined by the genetic code. Here, a protein is a perturbagen whereby its ability to modulate a physiological process or a disease pathology is assessed."@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "protein"@en .
+
+obo:NCIT_C13356 a skos:Concept;
+  skos:broader incentive:1053;
+  skos:definition "Plasma is the fluid (noncellular) portion of the circulating blood, as distinguished from the serum that is the fluid portion of the blood obtained by removal of the fibrin clot and blood cells after coagulation."@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "plasma"@en .
+
+obo:NCIT_C735 a skos:Concept;
+  skos:broader incentive:1053;
+  skos:definition "A compound of two or more amino acids where the alpha carboxyl group of one is bound to the alpha amino group of another."@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "peptide"@en .
+
+obo:NCIT_C14225 a skos:Concept;
+  skos:broader incentive:1053;
+  skos:definition "The bipedal primate mammal, Homo sapiens; belonging to man or mankind; pertaining to man or to the race of man; use of man as experimental subject or unit of analysis in research."@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "human"@en .
+
+obo:NCIT_C616 a skos:Concept;
+  skos:broader incentive:1053;
+  skos:definition "A class of hydrocarbon-containing organic compounds. Lipids are insoluble in water but soluble in nonpolar solvents and play important roles in living organisms: these roles include functioning as energy storage molecules, serving as structural components of cell membranes, and constituting important signaling molecules. Lipids can be subdivided into 2 groups: fatty acids and glycerides."@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "lipid"@en .
+
+obo:CHEBI_25212 a skos:Concept;
+  skos:broader incentive:1053;
+  skos:definition "Any intermediate or product resulting from metabolism. The term 'metabolite' subsumes the classes commonly known as primary and secondary metabolites."@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "metabolite"@en .
+
+bao:BAO_0000270 a skos:Concept;
+  skos:broader incentive:1053;
+  skos:definition "RNA or ribonucleic acid is a polymer of nucleotides with a backbone made of ribose sugar and phosphate groups linked together by ester bonds. RNA has the base uracil instead of thymine, which is present in DNA."@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "RNA"@en .
+
+obo:NCIT_C12434 a skos:Concept;
+  skos:broader incentive:1053;
+  skos:definition "A liquid tissue; its major function is to transport oxygen throughout the body. It also supplies the tissues with nutrients, removes waste products, and contains various components of the immune system defending the body against infection. Several hormones also travel in the blood."@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "blood"@en .
+
+incentive:1062 a skos:Concept;
+  skos:broader incentive:1053;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "IgG1-rHA_C"@en .
+
+incentive:1063 a skos:Concept;
+  skos:broader incentive:1053;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "IgG1-rHA_B"@en .
+
+incentive:1064 a skos:Concept;
+  skos:broader incentive:1053;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "IgG2-rHA_C"@en .
+
+obo:NCIT_C20464 a skos:Concept;
+  skos:broader incentive:1053;
+  skos:definition "A class of soluble glycoproteins which act nonenzymatically through specific receptors to regulate immune responses. Cytokines are derived from both immune and non-immune cells and are intercellular mediators that differ from hormones in that they are produced by a number of tissue or cell types rather than by specialized glands."@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "cytokine"@en .
+
+obo:NCIT_C16295 a skos:Concept;
+  skos:broader incentive:1053;
+  skos:definition "A type of protein made by B lymphocytes in response to a foreign substance (antigen). Each antibody only binds to a specific antigen, helping to destroy the antigen directly or by assisting white blood cells to destroy the antigen."@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "antibody"@en .
+
+obo:NCIT_C16554 a skos:Concept;
+  skos:broader incentive:1053;
+  skos:definition "Molecules that catalyze a chemical reaction. They are usually proteins, although catalytic RNA and DNA molecules have been identified."@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "enzyme"@en .
+
+obo:OBI_0001875 a skos:Concept;
+  skos:broader incentive:1053;
+  skos:definition "a cultured cell population comprised of a single type of immune system cell"@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "cultured immune cell population"@en .
+
+obo:NCIT_C25463 a skos:Concept;
+  skos:broader incentive:1048;
+  skos:definition "Determining the number or amount of something."@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "count"@en .
+
+obo:NCIT_C16586 a skos:Concept;
+  skos:broader incentive:1048;
+  skos:definition "Fluorescence is a luminescence (i.e., optical phenomenon) in cold bodies, in which a molecule absorbs a high-energy photon, and re-emits it as a lower-energy (longer-wavelength) photon. The energy difference between the absorbed and emitted photons ends up as molecular vibrations (heat)."@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "flourescence"@en .
+
+incentive:1071 a skos:Concept;
+  skos:broader incentive:1053;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "human donor"@en .
+
+obo:NCIT_C163046 a skos:Concept;
+  skos:broader incentive:1048;
+  skos:definition "A unit of measure for the mean fluorescence intensity."@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "mean fluorescence intensity unit"@en .
+
+sio:SIO_001367 a skos:Concept;
+  skos:broader incentive:1048;
+  skos:definition "Frequency is the number of occurrences of a repeating event per unit time"@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "frequency"@en .
+
+incentive:1074 a skos:Concept;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:narrower obo:NCIT_C28385, obo:NCIT_C37987, obo:PATO_0001161;
+  skos:prefLabel "constraint"@en;
+  skos:topConceptOf <http://purl.org/incentive> .
+
+obo:NCIT_C28385 a skos:Concept;
+  skos:broader incentive:1074;
+  skos:definition "A status indicating that an individual has received a vaccination."@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "vaccinated"@en .
+
+obo:PATO_0001161 a skos:Concept;
+  skos:broader incentive:1074;
+  skos:definition "A concentration which relatively low."@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "diluted"@en .
+
+obo:NCIT_C25554 a skos:Concept;
+  skos:broader incentive:1048;
+  skos:definition "A position on a scale measuring intensity, quality, or amount."@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "level"@en .
+
+obo:NCIT_C37987 a skos:Concept;
+  skos:broader incentive:1074;
+  skos:definition "Showing characteristics of life; displaying signs of life."@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "alive"@en .
+
+incentive:1079 a skos:Concept;
+  skos:broader incentive:1001;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "concentration of soluble factors in human blood samples"@en;
+  iop:hasConstraint obo:NCIT_C28385;
+  iop:hasContextObject incentive:1072;
+  iop:hasMatrix obo:NCIT_C12434;
+  iop:hasObjectOfInterest obo:NCIT_C20464;
+  iop:hasProperty sio:SIO_001088 .
+
+sio:SIO_001088 a skos:Concept;
+  skos:broader incentive:1048;
+  skos:definition "concentration is the amount of substance per unit volume of a solution"@en;
+  skos:inScheme <http://purl.org/incentive>;
+  skos:prefLabel "concentration"@en .
